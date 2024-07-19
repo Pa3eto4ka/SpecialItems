@@ -25,19 +25,7 @@ import java.util.Map;
 import static org.pa3etka.specialitems.ConfigReader.*;
 
 public class SpecialBall extends SpecialItem {
-//    private PotionEffectType effectOnHit;
-//    private Particle particleOnHit;
-//    private Sound soundShooter;
-//    private Sound hitSound;
-//    private Sound impactSound;
-//
-//    public SpecialBall(PotionEffectType effectOnHit, Particle particleOnHit, Sound soundShooter, Sound hitSound, Sound impactSound) {
-//        this.effectOnHit = effectOnHit;
-//        this.particleOnHit = particleOnHit;
-//        this.soundShooter = soundShooter;
-//        this.hitSound = hitSound;
-//        this.impactSound = impactSound;
-//    }
+
 
 
 
