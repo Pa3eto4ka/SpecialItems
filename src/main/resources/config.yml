@@ -1,0 +1,83 @@
+#Раздел всех предметов типа снарядов
+SpecialItems:
+  #Название предмета снаряда в конфиге
+  FrozenBall:
+    #Отображаемое название снаряда
+    Name: "Frozen Ball"
+    #ID предмета снаряда
+    Item: "SNOWBALL"
+    #Кастомная модель текстуры для обработки типа снаряда
+    CustomModelData: 1001
+    NbtTags: "FROZENBALLS"
+    #Характеристика снаряда
+    ProjectileHit:
+      #Урон наносимый снарядом цели
+      Damage: 5.0
+      #Урон наносимый предмету сопротивления
+      DamageResisterItem: 1
+      #Накладываемые эффекты на цель
+      PotionEffect:
+        - "SLOW"
+        - "WEAKNESS"
+      #Воспроизводимые частички при попадании
+      ParticleEffect:
+        - "FIREWORKS_SPARK"
+      #Воспроизводимые звуки снаряда
+      Sounds:
+        #Звук при попадании снаряда куда-то
+        Hit_sound:
+          - "ENTITY_SNOWBALL_THROW"
+        #Звук для стрелка при выстреле
+        Shooter_sound:
+          - "ENTITY_PLAYER_ATTACK_CRIT"
+        #Звук при попадании снаряда в цель
+        Impact_sound:
+          - "ENTITY_SNOWBALL_THROW"
+  FireBall:
+    Name: "Fire Ball"
+    Item: "SNOWBALL"
+    CustomModelData: 1002
+    NbtTags: "FIRENBALLS"
+    ProjectileHit:
+      Damage: 10.0
+      DamageResisterItem: 2
+      PotionEffect:
+        - "SLOW"
+      ParticleEffect:
+        - "FIREWORKS_SPARK"
+      Sounds:
+        Hit_sound:
+          - "ENTITY_SNOWBALL_THROW"
+        Shooter_sound:
+          - "ENTITY_PLAYER_ATTACK_CRIT"
+        Impact_sound:
+          - "ENTITY_SNOWBALL_THROW"
+#Раздел всех предметов сопротивления
+ResisterItems:
+  #Название предмета сопротивления в конфиге
+  Anifrize:
+    Name: "Anifrize"
+    Item: "WOODEN_HOE"
+    CustomModelData: 1003
+    #От каких специальных предметов защищает предмет
+    Resist:
+      - FrozenBall
+    #От каких накладываемых эффектов защищает
+    ResisteAbbilities:
+      - "SLOW"
+    #На сколько меньше процент урона от спец-снарядов получит из-за защиты
+    ResisteDamageProjectilePercent: 0.2
+    #На сколько меньше процент урона от всего дамага получит из-за защиты
+    ResisteDamageAllPercent: 0.5
+  Anifire:
+    Name: "Anifire"
+    Item: "WOODEN_HOE"
+    CustomModelData: 1004
+    Resist:
+      - FireBall
+    ResisteAbbilities:
+      - "SLOW"
+    #На сколько меньше процент урона от спец-снарядов получит из-за защиты
+    ResisteDamageProjectilePercent: 0.2
+    #На сколько меньше процент урона от всего дамага получит из-за защиты
+    ResisteDamageAllPercent: 0.5

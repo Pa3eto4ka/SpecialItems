@@ -1,0 +1,16 @@
+name: SpecialItems
+version: '1.0-SNAPSHOT'
+main: org.pa3etka.specialitems.SpecialItem
+api-version: '1.20'
+
+commands:
+  specialitems:
+    description: Команда для выдачи специального предмета
+    usage: /specialitems give <игрок> <название_предмета> <количество>
+    permission: specialitems.command.specialitem
+    permission-message: У вас нет прав на использование этой команды
+  specialitems list:
+    description: Выводит список всех особых предметов
+    usage: /specialitems list
+    permission: specialitems.command.specialitemlist
+    permission-message: У вас нет прав на использование этой команды
